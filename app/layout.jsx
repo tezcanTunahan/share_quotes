@@ -1,4 +1,6 @@
-import "@/styles/global.css";
+import Nav from "@/components/nav/Nav";
+import Provider from "@/components/Provider";
+import "./global.scss";
 
 export const metadata = {
   title: "shareQuotes",
@@ -8,8 +10,13 @@ export const metadata = {
 export default function Layout({ children }) {
   return (
     <html lang="en">
-      <body>
-        <main className="app">{children}</main>
+      <body suppressHydrationWarning={true}>
+        <Provider>
+          <main className="app">
+            <Nav />
+            {children}
+          </main>
+        </Provider>
       </body>
     </html>
   );

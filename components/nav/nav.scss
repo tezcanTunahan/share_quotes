@@ -1,0 +1,23 @@
+.nav {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  &__left {
+    display: flex;
+    gap: 2rem;
+  }
+  &__button {
+    background-color: transparent;
+    border: 1px solid white;
+    border-radius: 15px;
+    color: white;
+    cursor: pointer;
+    padding: 0.3rem 0.6rem;
+    &:hover {
+      background-color: white;
+      color: black;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+}
