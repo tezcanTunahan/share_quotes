@@ -22,7 +22,7 @@ export default function Nav() {
       </div>
       <div className="nav__left">
         {session?.user ? (
-          <div>
+          <div className="nav__left__login">
             <Link href="/profile">{session.user.name}</Link>
             <button onClick={signOut} className="nav__button">
               Log out

@@ -13,7 +13,7 @@ const QuotesCardList = ({ data, handleDelete }) => {
 export default function MyProfile({ name, quotes, handleDelete }) {
   return (
     <div>
-      <h3>{name}'s Profile</h3>
+      <h3 style={{ marginBottom: "1rem" }}>{name}'s Profile</h3>
       <QuotesCardList data={quotes} handleDelete={handleDelete} />
     </div>
   );

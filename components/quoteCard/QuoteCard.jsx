@@ -23,12 +23,16 @@ export default function QuoteCard({ quote, handleDelete }) {
       <p>{quote.quote}</p>
 
       <p>#{quote.tag}</p>
-      <button onClick={handleCopy}>
-        <p>{copied === quote.quote ? "Copied" : "Coppy"}</p>
-      </button>
-      {session?.user.id === quote.creator._id && pathName === "/profile" && (
-        <button onClick={() => handleDelete(quote)}>Delete</button>
-      )}
+      <div style={{ display: "flex", gap: "1rem" }}>
+        <button className="button default" onClick={handleCopy}>
+          <p>{copied === quote.quote ? "Copied" : "Coppy"}</p>
+        </button>
+        {session?.user.id === quote.creator._id && pathName === "/profile" && (
+          <button className="button danger" onClick={() => handleDelete(quote)}>
+            Delete
+          </button>
+        )}
+      </div>
     </div>
   );
 }

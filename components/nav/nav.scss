@@ -5,7 +5,10 @@
   justify-content: space-around;
   &__left {
     display: flex;
-    gap: 2rem;
+    &__login {
+      display: flex;
+      gap: 2rem;
+    }
   }
   &__button {
     background-color: transparent;
